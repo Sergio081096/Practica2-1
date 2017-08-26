@@ -25,17 +25,36 @@ void display ( void )   // Creamos la funcion donde se dibuja
 
 	//Poner aqui codigo ha dibujar
 	//glPointSize(10.0);//tamaño del punto
-	glBegin(GL_LINE_LOOP);//pluar,puntos(GL_POINTS), lineas(GL_LINES), todos unicdos(GL_LINE_LOOP),triangulos(GL_TRIANGLES),poligono(GL_POLYGON)
+	glBegin(GL_POLYGON);//pluar,puntos(GL_POINTS), lineas(GL_LINES), todos unicdos(GL_LINE_LOOP),triangulos(GL_TRIANGLES),poligono(GL_POLYGON)
 	glColor3f(1.0,0.0,0.0);//desde aqui empieza el color y continua hasta que encuentre otro color
-	glVertex3f(-9.0, 1.0, -1.2);//1  3 ejes de coordenadas ---flotantes
-	glVertex3f(-9.0, 9.0, -1.2);//2
-	glVertex3f(-3.0, 9.0, -1.2);//3
-	glVertex3f(-3.0, 7.0, -1.2);//4
-	glVertex3f(-7.0, 7.0, -1.2);//5/*	
-	glVertex3f(-7.0, 3.0, -1.2);//6
-	glVertex3f(-3.0, 3.0, -1.2);//7
-	glVertex3f(-3.0, 1.0, -1.2);//8
+	glVertex3f(130.0,- 20.0, -1.2);//1  3 ejes de coordenadas ---flotantes
+	glVertex3f(150.0, -90.0, -1.2);//2	
+	glVertex3f(110.0, -90.0, -1.2);//10
 	glEnd();//termina
+	glColor3f(1.0,1.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex3f(150.0, -90.0, -1.2);//2	
+	glVertex3f(210.0, -90.0, -1.2);//3
+	glVertex3f(160.0, -130.0, -1.2);//4
+	glEnd();
+	glColor3f(0.0,0.0,1.0);
+	glBegin(GL_POLYGON);
+	glVertex3f(160.0, -130.0, -1.2);//4
+	glVertex3f(180.0, -200.0, -1.2);//5/*	
+	glVertex3f(130.0, -160.0, -1.2);//6
+	glEnd();
+	glColor3f(0.0,1.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex3f(130.0, -160.0, -1.2);//6
+	glVertex3f(80.0, -200.0, -1.2);//7
+	glVertex3f(100.0, -130.0, -1.2);//8
+	glEnd();
+	glColor3f(1.0,0.0,1.0);
+	glBegin(GL_POLYGON);
+	glVertex3f(100.0, -130.0, -1.2);//8
+	glVertex3f(50.0, -90.0, -1.2);//9
+	glVertex3f(110.0, -90.0, -1.2);//10
+	glEnd();//termina*/
 	glFlush();
 }
 
@@ -52,7 +71,7 @@ void reshape ( int width , int height )   // Creamos funcion Reshape
 	glLoadIdentity();
 
 	// Ortogonal
-	glOrtho(-20,20,-20,20,0.1,2);//dimenciones
+	glOrtho(0,250,-250,0,0.1,2);//dimenciones
 	//horizontal, vertical,---
 
 	glMatrixMode(GL_MODELVIEW);							// Seleccionamos Modelview Matrix
